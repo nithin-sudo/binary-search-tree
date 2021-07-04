@@ -24,7 +24,8 @@ public class Runner {
         bst1.insert(63);
         bst1.insert(67);
         System.out.println("\nBinary search tree after insertion:");
-        bst.inOrderTraversal(bst1.root);
+        bst1.inOrderTraversal(bst1.root);
+        bst1.searchNode(bst.root,16);
     }
 }
 

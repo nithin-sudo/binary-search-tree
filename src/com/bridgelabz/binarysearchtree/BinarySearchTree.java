@@ -32,7 +32,35 @@ public class BinarySearchTree {
                 }
             }
         }
-
+    /**
+     * Searching a particular node using searchNode Method
+     * @param root
+     * @param key
+     */
+    public static void searchNode(Node root, int key)
+    {
+        Node currentNode= root;
+        Node parentNode = null;
+        while (currentNode!= null && currentNode.data != key)
+        {
+            parentNode = currentNode;
+            if (key < currentNode.data) {
+                currentNode = currentNode.left;
+            }
+            else {
+                currentNode = currentNode.right;
+            }
+        }
+        if (parentNode == null) {
+            System.out.print("The node with key " + key + " is root node");
+        }
+        else if (key < parentNode.data) {
+            System.out.print("The given key is the left node of the node with key " + parentNode.data);
+        }
+        else {
+            System.out.print("The given key is the right node of the node with key " + parentNode.data);
+        }
+    }
     /**
      * printing the elements by using in order traversal approach.
      * @param node
