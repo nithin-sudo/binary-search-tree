@@ -12,7 +12,7 @@ public class BinarySearchTree {
                 return;
             }
             else{
-                Node currentNode=root,parentNode=null;
+                Node currentNode=root,parentNode;
                 while (true){
                     parentNode=currentNode;
                     if(data<currentNode.data){
